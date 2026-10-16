@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra - Fashion Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Myntra-style header -->
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="m-logo">Myntra</span>
+        </a>
+
+        <nav class="navigation">
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#home">HOME & LIVING</a>
+            <a href="#beauty">BEAUTY</a>
+            <a href="#studio">STUDIO <sup>NEW</sup></a>
+        </nav>
+
+        <div class="search">
+            <span>⌕</span>
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+
+        <div class="user-menu">
+            <a href="#profile"><span>♙</span><small>Profile</small></a>
+            <a href="#wishlist"><span>♡</span><small>Wishlist</small></a>
+            <a href="#bag"><span>♧</span><small>Bag</small></a>
+        </div>
+    </header>
+
+    <!-- Sale strip -->
+    <div class="sale-strip">
+        <b>BIG FASHION SALE</b>
+        <span> | </span>
+        <span>Trendy styles. Amazing prices.</span>
+        <strong>UP TO 70% OFF</strong>
+    </div>
+
+    <!-- Main fashion banner -->
+    <section class="hero">
+        <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85"
+            alt="Fashion collection banner">
+
+        <div class="hero-text">
+            <p>THE STYLE EDIT</p>
+            <h1>FASHION<br>FOR EVERY YOU</h1>
+            <h2>UP TO 70% OFF</h2>
+            <a href="#categories">EXPLORE NOW →</a>
+        </div>
+    </section>
+
+    <!-- Brand deals -->
+    <section class="section">
+        <h2 class="section-heading">BIGGEST DEALS ON TOP BRANDS</h2>
+
+        <div class="brand-grid">
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="Casual T-shirts">
+                <h3>CASUAL WEAR</h3>
+                <p>UP TO 60% OFF</p>
+            </div>
+
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=500&q=80" alt="Women's dresses">
+                <h3>ETHNIC & WESTERN</h3>
+                <p>UP TO 70% OFF</p>
+            </div>
+
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Fashion sneakers">
+                <h3>FOOTWEAR</h3>
+                <p>STARTING ₹799</p>
+            </div>
+
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=500&q=80" alt="Fashion handbag">
+                <h3>HANDBAGS</h3>
+                <p>UP TO 50% OFF</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+        <h2 class="section-heading">SHOP BY CATEGORY</h2>
+
+        <div class="category-grid">
+            <a href="#men" class="category">
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=400&q=80" alt="Men's fashion">
+                <h3>Men</h3>
+            </a>
+
+            <a href="#women" class="category">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80" alt="Women's fashion">
+                <h3>Women</h3>
+            </a>
+
+            <a href="#kids" class="category">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=400&q=80" alt="Kids' fashion">
+                <h3>Kids</h3>
+            </a>
+
+            <a href="#beauty" class="category">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Beauty products">
+                <h3>Beauty</h3>
+            </a>
+
+            <a href="#footwear" class="category">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Shoes">
+                <h3>Footwear</h3>
+            </a>
+
+            <a href="#accessories" class="category">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80" alt="Accessories">
+                <h3>Accessories</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section" id="men">
+        <h2 class="section-heading">TRENDING NOW</h2>
+
+        <div class="product-grid">
+            <article class="product">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="Men's T-shirt">
+                <div class="product-details">
+                    <h3>Roadster</h3>
+                    <p>Men Pure Cotton T-Shirt</p>
+                    <strong>₹499</strong>
+                    <del>₹999</del>
+                    <span class="discount">(50% OFF)</span>
+                </div>
+            </article>
+
+            <article class="product" id="women">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=500&q=80" alt="Women's dress">
+                <div class="product-details">
+                    <h3>DressBerry</h3>
+                    <p>Women Casual Dress</p>
+                    <strong>₹899</strong>
+                    <del>₹1,799</del>
+                    <span class="discount">(50% OFF)</span>
+                </div>
+            </article>
+
+            <article class="product" id="footwear">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Red sneakers">
+                <div class="product-details">
+                    <h3>HRX</h3>
+                    <p>Casual Sports Sneakers</p>
+                    <strong>₹1,199</strong>
+                    <del>₹2,499</del>
+                    <span class="discount">(52% OFF)</span>
+                </div>
+            </article>
+
+            <article class="product" id="accessories">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=500&q=80" alt="Women's handbag">
+                <div class="product-details">
+                    <h3>Accessorize</h3>
+                    <p>Stylish Everyday Handbag</p>
+                    <strong>₹799</strong>
+                    <del>₹1,599</del>
+                    <span class="discount">(50% OFF)</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <h3>ONLINE SHOPPING</h3>
+            <a href="#men">Men</a>
+            <a href="#women">Women</a>
+            <a href="#kids">Kids</a>
+            <a href="#beauty">Beauty</a>
+        </div>
+
+        <div>
+            <h3>CUSTOMER POLICIES</h3>
+            <a href="#contact">Contact Us</a>
+            <a href="#faq">FAQ</a>
+            <a href="#returns">Returns</a>
+        </div>
+
+        <div>
+            <h3>ABOUT THIS PROJECT</h3>
+            <p>A fashion shopping homepage built using HTML and CSS.</p>
+            <p>Student Web Development Assignment</p>
+        </div>
+
+        <p class="copyright">© 2026 Fashion Shopping Website | Educational Project</p>
+    </footer>
+
+</body>
+</html>
