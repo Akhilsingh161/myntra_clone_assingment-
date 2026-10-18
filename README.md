@@ -1,6 +1,6 @@
 # Myntra Clone 👔
 
-A beginner-friendly **Myntra-inspired fashion shopping homepage** built using HTML and CSS, featuring men's clothing, fashion banners, product sections, and category cards.
+A beginner-friendly **Myntra-inspired fashion shopping homepage** built using HTML, CSS and JAVASCRIPT, featuring men's clothing, fashion banners, product sections, and category cards.
 
 ## ✨ Features
 
@@ -43,4 +43,4 @@ This is an educational project inspired by Myntra. It is not officially affiliat
 
 ## 👨‍💻 Author
 
-Created as a beginner web development project using HTML and CSS.
+Created as a beginner web development project using HTML and CSS,JAVASCRIPT.
