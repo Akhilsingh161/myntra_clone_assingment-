@@ -4,256 +4,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myntra - Fashion Shopping</title>
+    <title>Myntra | Fashion Store</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
+<header class="header">
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+    <a href="#home" class="logo">MYNTRA</a>
 
-        <a href="#" class="logo">
-    <span class="logo-m">M</span><span class="logo-y">Y</span><span class="logo-n">N</span><span class="logo-t">T</span><span class="logo-r">R</span><span class="logo-a">A</span>
-</a>
+    <nav class="navigation">
+        <a href="#men" data-department="Men">MEN</a>
+        <a href="#women" data-department="Women">WOMEN</a>
+        <a href="#kids" data-department="Kids">KIDS</a>
+        <a href="#home-living" data-department="Home & Living">HOME & LIVING</a>
+        <a href="#beauty" data-department="Beauty">BEAUTY</a>
+        <a href="#studio" data-department="Studio">STUDIO</a>
+    </nav>
 
-        <nav class="navigation">
-            <a href="#men">MEN</a>
-            <a href="#women">WOMEN</a>
-            <a href="#kids">KIDS</a>
-            <a href="#home">HOME & LIVING</a>
-            <a href="#beauty">BEAUTY</a>
-            <a href="#studio">STUDIO <sup>NEW</sup></a>
-        </nav>
-
-        <div class="search">
-            <button class="search-button" aria-label="Search">
-                &#128269;
-            </button>
-            <input type="text"
-                   placeholder="Search for products, brands and more">
-        </div>
-
-        <div class="user-menu">
-            <a href="#profile">
-                <span>♙</span>
-                <small>Profile</small>
-            </a>
-
-            <a href="#wishlist">
-                <span>♡</span>
-                <small>Wishlist</small>
-            </a>
-
-            <a href="#bag">
-                <span>♧</span>
-                <small>Bag</small>
-            </a>
-        </div>
-
-    </header>
-
-    <!-- Sale Strip -->
-    <div class="sale-strip">
-        <b>BIG FASHION SALE</b>
-        <span>|</span>
-        <span>Upgrade your everyday style</span>
-        <strong>UP TO 70% OFF</strong>
+    <div class="search">
+        <span>🔍</span>
+        <input id="searchInput" type="search"
+               placeholder="Search products, brands and more">
+        <button id="clearSearch" aria-label="Clear search">×</button>
     </div>
 
-    <!-- Main Banner -->
+    <div class="user-menu">
+        <button data-panel="profile"><span>♙</span><small>Profile</small></button>
+        <button data-panel="wishlist"><span>♡</span><small>Wishlist <b id="wishlistCount"></b></small></button>
+        <button data-panel="bag"><span>🛍</span><small>Bag <b id="bagCount"></b></small></button>
+    </div>
+</header>
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2>MYNTRA MENU</h2>
+        <button id="closeMenu" aria-label="Close menu">×</button>
+    </div>
+    <a href="#men" data-department="Men">Men</a>
+    <a href="#women" data-department="Women">Women</a>
+    <a href="#kids" data-department="Kids">Kids</a>
+    <a href="#home-living" data-department="Home & Living">Home & Living</a>
+    <a href="#beauty" data-department="Beauty">Beauty</a>
+    <button data-panel="profile">My Profile</button>
+    <button data-panel="wishlist">My Wishlist</button>
+    <button data-panel="bag">My Shopping Bag</button>
+</aside>
+<div class="overlay" id="overlay"></div>
+
+<main id="home">
+    <div class="sale-strip">
+        <span>✨ THE FESTIVE STYLE EDIT</span>
+        <strong>UP TO 70% OFF</strong>
+        <span>Fresh looks. Better prices.</span>
+    </div>
+
     <section class="hero">
-        <img
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85"
-            alt="Fashion campaign banner">
-
-        <div class="hero-text">
-            <p>THE STYLE EDIT</p>
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85"
+             alt="Fashion collection" class="hero-image">
+        <div class="hero-content">
+            <p class="eyebrow">NEW SEASON • NEW STYLE</p>
             <h1>FASHION<br>FOR EVERY YOU</h1>
-            <h2>UP TO 70% OFF</h2>
-            <a href="#categories">EXPLORE NOW →</a>
+            <p>Find your next favourite look.</p>
+            <a href="#shop" class="primary-button" id="exploreButton">EXPLORE COLLECTION →</a>
         </div>
     </section>
 
-    <!-- Brand Deals -->
     <section class="section">
-        <h2 class="section-heading">BIGGEST DEALS ON TOP BRANDS</h2>
-
-        <div class="brand-grid">
-
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"
-                     alt="Casual T-shirts">
-                <h3>CASUAL WEAR</h3>
-                <p>UP TO 60% OFF</p>
-            </div>
-
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=500&q=80"
-                     alt="Ethnic fashion">
-                <h3>ETHNIC WEAR</h3>
-                <p>UP TO 70% OFF</p>
-            </div>
-
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80"
-                     alt="Sports sneakers">
-                <h3>FOOTWEAR</h3>
-                <p>STARTING ₹799</p>
-            </div>
-
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80"
-                     alt="Fashion handbag">
-                <h3>ACCESSORIES</h3>
-                <p>UP TO 50% OFF</p>
-            </div>
-
+        <div class="section-title">
+            <p class="eyebrow">YOUR STYLE, YOUR WAY</p>
+            <h2>SHOP BY CATEGORY</h2>
         </div>
-    </section>
-
-    <!-- Categories -->
-    <section class="section" id="categories">
-        <h2 class="section-heading">SHOP BY CATEGORY</h2>
 
         <div class="category-grid">
-
-            <a href="#men" class="category">
-                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80"
-                     alt="Men's clothing">
-                <h3>Men</h3>
+            <a href="#men" class="category-card" data-department="Men">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Fashion for men">
+                <span>MEN</span>
             </a>
-
-            <a href="#women" class="category" id="women">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=80"
-                     alt="Women's fashion">
-                <h3>Women</h3>
+            <a href="#women" class="category-card" data-department="Women">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="Fashion for women">
+                <span>WOMEN</span>
             </a>
-
-            <a href="#kids" class="category" id="kids">
-                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=400&q=80"
-                     alt="Kids' clothing">
-                <h3>Kids</h3>
+            <a href="#kids" class="category-card" data-department="Kids">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80" alt="Kids fashion">
+                <span>KIDS</span>
             </a>
-
-            <a href="#beauty" class="category" id="beauty">
-                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80"
-                     alt="Beauty products">
-                <h3>Beauty</h3>
+            <a href="#beauty" class="category-card" data-department="Beauty">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Beauty products">
+                <span>BEAUTY</span>
             </a>
-
-            <a href="#footwear" class="category">
-                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=400&q=80"
-                     alt="Fashion footwear">
-                <h3>Footwear</h3>
-            </a>
-
-            <a href="#accessories" class="category">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80"
-                     alt="Watch and accessories">
-                <h3>Accessories</h3>
-            </a>
-
         </div>
     </section>
 
-    <!-- Men's Products -->
-    <section class="section" id="men">
-        <h2 class="section-heading">TRENDING MEN'S FASHION</h2>
-
-        <div class="product-grid">
-
-            <article class="product">
-                <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=500&q=80"
-                     alt="Men's T-shirt">
-                <div class="product-details">
-                    <h3>Roadster</h3>
-                    <p>Men's Casual T-Shirt</p>
-                    <strong>₹499</strong>
-                    <del>₹999</del>
-                    <span class="discount">50% OFF</span>
-                </div>
-            </article>
-
-            <article class="product">
-                <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=500&q=80"
-                     alt="Men's casual shirt">
-                <div class="product-details">
-                    <h3>Roadster</h3>
-                    <p>Men's Casual Shirt</p>
-                    <strong>₹899</strong>
-                    <del>₹1,799</del>
-                    <span class="discount">50% OFF</span>
-                </div>
-            </article>
-
-            <article class="product" id="footwear">
-                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=500&q=80"
-                     alt="Casual sneakers">
-                <div class="product-details">
-                    <h3>HRX</h3>
-                    <p>Casual Sports Sneakers</p>
-                    <strong>₹1,199</strong>
-                    <del>₹2,499</del>
-                    <span class="discount">52% OFF</span>
-                </div>
-            </article>
-
-            <article class="product" id="accessories">
-                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=500&q=80"
-                     alt="Classic wristwatch">
-                <div class="product-details">
-                    <h3>Timewear</h3>
-                    <p>Classic Everyday Watch</p>
-                    <strong>₹799</strong>
-                    <del>₹1,599</del>
-                    <span class="discount">50% OFF</span>
-                </div>
-            </article>
-
+    <section class="section trending">
+        <div class="section-title">
+            <p class="eyebrow">THE LATEST EDIT</p>
+            <h2>WHAT'S TRENDING</h2>
+        </div>
+        <div class="trend-grid">
+            <button class="trend-card" data-category="tshirt">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Casual T-shirts">
+                <span>EVERYDAY T-SHIRTS</span>
+                <small>Starting at ₹399</small>
+            </button>
+            <button class="trend-card" data-category="shoes">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Sports shoes">
+                <span>STEP UP YOUR GAME</span>
+                <small>Explore footwear</small>
+            </button>
+            <button class="trend-card" data-category="dress">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Women's fashion">
+                <span>THE STYLE EDIT</span>
+                <small>Looks for every occasion</small>
+            </button>
         </div>
     </section>
 
-    <!-- Footer -->
-    ```html
-<!-- Colourful Footer -->
+    <section class="shop-section" id="shop">
+        <div class="shop-heading">
+            <div>
+                <p class="eyebrow">DISCOVER YOUR FAVOURITES</p>
+                <h2 id="shopTitle">ALL PRODUCTS</h2>
+                <p id="resultCount">Browse our collection</p>
+            </div>
+            <button id="resetFilters" class="outline-button">CLEAR FILTERS</button>
+        </div>
+
+        <div class="shop-layout">
+            <aside class="filters">
+                <h3>FILTERS</h3>
+
+                <details open>
+                    <summary>Category</summary>
+                    <label><input type="checkbox" name="category" value="tshirt"> T-shirts</label>
+                    <label><input type="checkbox" name="category" value="shirt"> Shirts</label>
+                    <label><input type="checkbox" name="category" value="jeans"> Jeans</label>
+                    <label><input type="checkbox" name="category" value="shoes"> Shoes</label>
+                    <label><input type="checkbox" name="category" value="dress"> Dresses</label>
+                    <label><input type="checkbox" name="category" value="watch"> Watches</label>
+                    <label><input type="checkbox" name="category" value="beauty"> Beauty</label>
+                    <label><input type="checkbox" name="category" value="home"> Home</label>
+                </details>
+
+                <details open>
+                    <summary>Brand</summary>
+                    <label><input type="checkbox" name="brand" value="roadster"> Roadster</label>
+                    <label><input type="checkbox" name="brand" value="hrx"> HRX</label>
+                    <label><input type="checkbox" name="brand" value="dressberry"> DressBerry</label>
+                    <label><input type="checkbox" name="brand" value="timewear"> Timewear</label>
+                    <label><input type="checkbox" name="brand" value="stylehub"> StyleHub</label>
+                </details>
+
+                <details open>
+                    <summary>Price</summary>
+                    <label><input type="checkbox" name="price" value="0-500"> Under ₹500</label>
+                    <label><input type="checkbox" name="price" value="500-1000"> ₹500–₹1,000</label>
+                    <label><input type="checkbox" name="price" value="1000-2000"> ₹1,000–₹2,000</label>
+                    <label><input type="checkbox" name="price" value="2000-999999"> ₹2,000 and above</label>
+                </details>
+
+                <details>
+                    <summary>Colour</summary>
+                    <label><input type="checkbox" name="colour" value="black"> Black</label>
+                    <label><input type="checkbox" name="colour" value="white"> White</label>
+                    <label><input type="checkbox" name="colour" value="blue"> Blue</label>
+                    <label><input type="checkbox" name="colour" value="red"> Red</label>
+                    <label><input type="checkbox" name="colour" value="pink"> Pink</label>
+                </details>
+
+                <details>
+                    <summary>Size</summary>
+                    <label><input type="checkbox" name="size" value="S"> S</label>
+                    <label><input type="checkbox" name="size" value="M"> M</label>
+                    <label><input type="checkbox" name="size" value="L"> L</label>
+                    <label><input type="checkbox" name="size" value="XL"> XL</label>
+                </details>
+
+                <details>
+                    <summary>Discount</summary>
+                    <label><input type="checkbox" name="discount" value="10"> 10% and above</label>
+                    <label><input type="checkbox" name="discount" value="20"> 20% and above</label>
+                    <label><input type="checkbox" name="discount" value="30"> 30% and above</label>
+                    <label><input type="checkbox" name="discount" value="50"> 50% and above</label>
+                </details>
+            </aside>
+
+            <div class="catalog">
+                <div class="catalog-toolbar">
+                    <span id="activeCategory">All categories</span>
+                    <select id="sortProducts" aria-label="Sort products">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="discount">Highest Discount</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="department-section" id="men">
+        <div class="department-heading">
+            <p class="eyebrow">EVERYDAY ESSENTIALS</p>
+            <h2>MEN'S FASHION</h2>
+            <p>Casual staples, smart fits and everyday footwear.</p>
+        </div>
+        <div class="department-grid">
+            <button class="department-card" data-category="tshirt">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="T-shirts">
+                <span>T-SHIRTS</span><small>Casual Style</small>
+            </button>
+            <button class="department-card" data-category="shirt">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Shirts">
+                <span>SHIRTS</span><small>Smart Looks</small>
+            </button>
+            <button class="department-card" data-category="shoes">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Shoes">
+                <span>FOOTWEAR</span><small>Step Into Style</small>
+            </button>
+            <button class="department-card" data-category="watch">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" alt="Watches">
+                <span>WATCHES</span><small>Finish Your Look</small>
+            </button>
+        </div>
+    </section>
+
+    <section class="department-section alternate" id="women">
+        <div class="department-heading">
+            <p class="eyebrow">OWN YOUR STYLE</p>
+            <h2>WOMEN'S FASHION</h2>
+            <p>Fresh outfits, versatile essentials and statement pieces.</p>
+        </div>
+        <div class="department-grid">
+            <button class="department-card" data-category="dress">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Women's outfits">
+                <span>DRESSES</span><small>Make an impression</small>
+            </button>
+            <button class="department-card" data-category="tshirt">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Women's tops">
+                <span>TOPS</span><small>Everyday favourites</small>
+            </button>
+            <button class="department-card" data-category="jeans">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="Jeans">
+                <span>JEANS</span><small>Find your fit</small>
+            </button>
+            <button class="department-card" data-category="beauty">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Beauty">
+                <span>BEAUTY</span><small>Your daily routine</small>
+            </button>
+        </div>
+    </section>
+
+    <section class="department-section" id="kids">
+        <div class="department-heading">
+            <p class="eyebrow">LITTLE STYLES, BIG SMILES</p>
+            <h2>KIDS' COLLECTION</h2>
+            <p>Comfortable, colourful styles for growing adventures.</p>
+        </div>
+        <div class="department-grid">
+            <button class="department-card" data-category="tshirt">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80" alt="Kids clothing">
+                <span>EVERYDAY WEAR</span><small>Play-ready comfort</small>
+            </button>
+            <button class="department-card" data-category="shirt">
+                <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=600&q=80" alt="Kids outfits">
+                <span>SMART STYLES</span><small>Ready for occasions</small>
+            </button>
+            <button class="department-card" data-category="shoes">
+                <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80" alt="Shoes">
+                <span>FOOTWEAR</span><small>Made for adventures</small>
+            </button>
+            <button class="department-card" data-category="watch">
+                <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80" alt="Watch">
+                <span>ACCESSORIES</span><small>Little finishing touches</small>
+            </button>
+        </div>
+    </section>
+
+    <section class="department-section alternate" id="home-living">
+        <div class="department-heading">
+            <p class="eyebrow">MAKE YOUR SPACE YOURS</p>
+            <h2>HOME & LIVING</h2>
+            <p>Thoughtful details for a more inviting home.</p>
+        </div>
+        <div class="department-grid">
+            <button class="department-card" data-category="home">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Home decor">
+                <span>HOME DECOR</span><small>Details that matter</small>
+            </button>
+            <button class="department-card" data-category="home">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Living room">
+                <span>LIVING SPACE</span><small>Comfort meets style</small>
+            </button>
+            <button class="department-card" data-category="home">
+                <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=80" alt="Interior">
+                <span>INTERIORS</span><small>Inspiration for home</small>
+            </button>
+            <button class="department-card" data-category="home">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" alt="Home styling">
+                <span>HOME STYLING</span><small>Make it personal</small>
+            </button>
+        </div>
+    </section>
+
+    <section class="department-section" id="beauty">
+        <div class="department-heading">
+            <p class="eyebrow">YOUR SELF-CARE EDIT</p>
+            <h2>BEAUTY & PERSONAL CARE</h2>
+            <p>Everyday essentials for your personal care routine.</p>
+        </div>
+        <div class="department-grid">
+            <button class="department-card" data-category="beauty">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Beauty products">
+                <span>MAKEUP</span><small>Express your style</small>
+            </button>
+            <button class="department-card" data-category="beauty">
+                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80" alt="Skincare">
+                <span>SKINCARE</span><small>Your daily ritual</small>
+            </button>
+            <button class="department-card" data-category="beauty">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="Perfume">
+                <span>FRAGRANCES</span><small>Leave a lasting note</small>
+            </button>
+            <button class="department-card" data-category="beauty">
+                <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&w=600&q=80" alt="Personal care">
+                <span>PERSONAL CARE</span><small>Feel your best</small>
+            </button>
+        </div>
+    </section>
+
+    <section class="studio-section" id="studio">
+        <div>
+            <p class="eyebrow">INSPIRE • EXPLORE • REPEAT</p>
+            <h2>THE STYLE STUDIO</h2>
+            <p>Explore outfit inspiration and discover your own look.</p>
+            <a href="#shop" class="primary-button" id="studioButton">EXPLORE PRODUCTS →</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=85" alt="Fashion inspiration">
+    </section>
+</main>
+
 <footer class="footer">
-
     <div class="footer-column">
         <h3>ONLINE SHOPPING</h3>
         <a href="#men">Men</a>
         <a href="#women">Women</a>
         <a href="#kids">Kids</a>
+        <a href="#home-living">Home & Living</a>
         <a href="#beauty">Beauty</a>
-        <a href="#footwear">Footwear</a>
     </div>
-
     <div class="footer-column">
-        <h3>CUSTOMER POLICIES</h3>
-        <a href="#contact">Contact Us</a>
-        <a href="#faq">FAQ</a>
-        <a href="#returns">Returns</a>
-        <a href="#shipping">Shipping Information</a>
-        <a href="#privacy">Privacy Policy</a>
+        <h3>HELP & SUPPORT</h3>
+        <a href="#shop">Shop Products</a>
+        <button data-panel="bag">Shopping Bag</button>
+        <button data-panel="wishlist">Wishlist</button>
+        <button data-panel="profile">Demo Profile</button>
     </div>
-
     <div class="footer-column">
         <h3>ABOUT THIS PROJECT</h3>
-        <p>A stylish fashion shopping homepage</p>
-        <p>Designed using HTML and CSS.</p>
-        <p class="student-text">Student Web Development Assignment</p>
-
-        <div class="footer-badge">
-            FASHION • STYLE • TRENDS
-        </div>
+        <p>A student-built fashion shopping frontend using HTML, CSS and JavaScript.</p>
+        <div class="footer-badge">MADE WITH <span class="heart">♥</span> FOR LEARNING</div>
     </div>
-
     <div class="copyright">
-        <p>© 2026 Myntra Fashion Clone | Educational Project</p>
-        <p>Made with <span class="heart">♥</span> for learning web development</p>
+        <p>© 2026 Fashion Store UI Demo | Educational Project</p>
+        <p>Independent frontend project. Not an official Myntra website.</p>
     </div>
-
 </footer>
-```
+
+<div class="modal-backdrop" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+        <h2 id="modalTitle">Details</h2>
+        <div id="modalContent"></div>
+    </section>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
 
 </body>
 </html>
